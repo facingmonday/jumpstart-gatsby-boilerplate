@@ -1,0 +1,9 @@
+@import '../../themes/theme-1';
+
+.section {
+  display: flex;
+  padding: 20px 60px;
+}
+.column {
+  flex-direction: column;
+}

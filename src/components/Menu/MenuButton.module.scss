@@ -1,0 +1,58 @@
+@import '../../themes/theme-1';
+@import '../../themes/mixins.scss';
+
+.menuButton {
+  height: 50px;
+  width: 50px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 4px;
+  position: absolute;
+  right: 0;
+  margin: 0px 10px;
+  @include respond-above(837px) {
+    display: none;
+  }
+  &__line {
+    height: 3px;
+    width: 30px;
+    background-color: white;
+    transition: all 0.2s ease;
+  }
+  &__lineTop {
+    transform: none;
+    transform-origin: top left;
+    margin-bottom: 8px;
+  }
+  &__lineTopOpen {
+    transform: rotate(45deg);
+    transform-origin: top left;
+    margin-bottom: 8px;
+  }
+
+  &__lineMiddle {
+    opacity: 1;
+    transform: none;
+  }
+  &__lineMiddleOpen {
+    opacity: 0;
+    transform: translateX(-16px);
+  }
+  &__lineBottom {
+    transform: none;
+    transform-origin: top left;
+    margin-top: 8px;
+      
+  }
+  &__lineBottomOpen {
+    transform-origin: top left;
+    margin-top: 8px;
+    transform: translateX(-1px) rotate(-45deg);
+  }
+  
+
+  
+}

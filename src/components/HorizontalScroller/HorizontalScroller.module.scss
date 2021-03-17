@@ -1,0 +1,13 @@
+@import '../../themes/theme-1';
+
+.horizontalScroller {
+  &__container {
+    flex: 1;
+    width: 100vw;
+  }
+  &__child {
+    width: 100vw;
+    overflow: hidden;
+    height: 100
+  }
+}

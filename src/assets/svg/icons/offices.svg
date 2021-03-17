@@ -1,0 +1,7 @@
+<svg width="41" height="36" viewBox="0 0 41 36" xmlns="http://www.w3.org/2000/svg">
+  <g fill="none" fill-rule="evenodd">
+    <path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M1.5 23l11-9 11 9"/>
+    <path d="M20.5 35V25M.5 35h28M4.5 35V25" stroke="currentColor" stroke-width="2"/>
+    <path d="M8.5 29v2M12.5 29v2M8.5 25v2M12.5 25v2M20.5 14V1h19v34h-11M31.5 8v2M35.5 8v2M31.5 12v2M35.5 12v2M31.5 4v2M35.5 4v2M31.5 20v2M35.5 20v2M31.5 24v2M35.5 24v2M31.5 16v2M35.5 16v2" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+  </g>
+</svg>

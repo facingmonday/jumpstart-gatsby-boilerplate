@@ -1,0 +1,15 @@
+@import '../../themes/theme-1';
+
+.heroCarousel {
+  width: 100%;
+  flex: 1;
+  &__image {
+    color: blue;
+    width: 100%;
+    height: 60vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+  }
+}

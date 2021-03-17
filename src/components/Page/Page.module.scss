@@ -1,0 +1,16 @@
+@import '../../themes/theme-1';
+
+.main__container{
+  padding: 60px 0px 0px 0px;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: black;
+}
+.main__body {
+  flex: 1 0 auto;
+}
+.main__footer {
+  flex-shrink: 0;
+}

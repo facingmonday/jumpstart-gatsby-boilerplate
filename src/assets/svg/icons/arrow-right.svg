@@ -1,0 +1,7 @@
+<!-- arrow button -->
+<svg width="30" height="10">
+  <g fill="currentColor">
+    <path d="M0 4h26v2H0z"/>
+    <path d="M25.1 9.9V.1L30 5z"/>
+  </g>
+</svg>

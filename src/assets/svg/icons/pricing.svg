@@ -1,0 +1,10 @@
+<svg width="41" height="34" viewBox="0 0 41 34" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(0 -3)" fill="none" fill-rule="evenodd">
+    <path stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M9.5 7V4h22v3M5.5 13v-3h30v3M1.5 16h38v20h-38z"/>
+    <circle fill="currentColor" cx="6.5" cy="21" r="2"/>
+    <circle fill="currentColor" cx="34.5" cy="21" r="2"/>
+    <circle fill="currentColor" cx="34.5" cy="31" r="2"/>
+    <circle fill="currentColor" cx="6.5" cy="31" r="2"/>
+    <circle stroke="currentColor" stroke-width="2" cx="20.5" cy="26" r="4"/>
+  </g>
+</svg>

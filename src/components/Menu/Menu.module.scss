@@ -1,0 +1,23 @@
+@import '../../themes/theme-1';
+
+.menu {
+  background-color: #000;
+
+  &__container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    opacity: 0.95;
+    color: #fafafa;
+    transition: height 0.3s ease;
+    z-index: 2;
+  }
+
+  &__menuList {
+    padding-top: 3rem;
+  }
+}
