@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { StaticImage } from 'gatsby-plugin-image';
 import { Menu, MenuItem, MenuButton } from '../menu';
 import Image from '../Image';
 import NavigationLink from '../NavigationLink';
@@ -8,68 +9,63 @@ class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      menuOpen:false,
-    }
+      menuOpen: false,
+    };
   }
 
   handleMenuClick() {
-    this.setState({menuOpen:!this.state.menuOpen});
+    this.setState({ menuOpen: !this.state.menuOpen });
   }
-  
+
   handleLinkClick(val) {
     console.log('val', val);
-    this.setState({menuOpen: false});
+    this.setState({ menuOpen: false });
     window.location.pathname = val.href;
   }
 
   render() {
     const menu = [
       {
-        label: 'Consulting',
+        label: 'Services',
         icon: '',
-        href: '/consulting'
+        href: '/services',
       },
       {
-        label: 'Photos',
+        label: 'Work',
         icon: '',
-        href: '/photos'
+        href: '/work',
       },
       {
-        label: 'Video',
+        label: 'Blog',
         icon: '',
-        href: '/video'
+        href: '/blog',
       },
       {
-        label: 'Web',
+        label: 'Contact',
         icon: '',
-        href: '/web'
-      },
-      {
-        label: 'Shop',
-        icon: '',
-        href: '/shop'
-      },
-      {
-        label: 'Contact Us',
-        icon: '',
-        href: '/contact'
+        href: '/contact',
       },
     ];
-    const menuItems = menu.map((val,index)=>{
-      return (
-        <MenuItem 
-          key={index} 
-          delay={`${index * 0.1}s`}
-          onClick={()=>this.handleLinkClick(val)}>{val.label}</MenuItem>)
-    });
-    return(
+    const menuItems = menu.map((val, index) => (
+      <MenuItem
+        key={index}
+        delay={`${index * 0.1}s`}
+        onClick={() => this.handleLinkClick(val)}
+      >
+        {val.label}
+      </MenuItem>
+    ));
+    return (
       <div className={styles.header}>
         <div className={styles.header__container}>
           <div className={styles.header__logo}>
-            <Image className={styles.header__thumbnail} src={require('../../assets/images/logos/logo.png')} /> 
+            <StaticImage
+              src="../../assets/images/logos/logo.png"
+
+            />
           </div>
-          <MenuButton open={this.state.menuOpen} onClick={()=>this.handleMenuClick()} color='white'/>
-          <div className={styles.header__navigation}>  
+          <MenuButton open={this.state.menuOpen} onClick={() => this.handleMenuClick()} color="white" />
+          <div className={styles.header__navigation}>
             {
               menu.map((val, index) => <NavigationLink key={index} href={val.href} label={val.label} />)
             }
@@ -79,7 +75,7 @@ class Header extends Component {
           {menuItems}
         </Menu>
       </div>
-    )
+    );
   }
 }
 

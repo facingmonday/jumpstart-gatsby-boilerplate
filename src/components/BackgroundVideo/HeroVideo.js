@@ -6,7 +6,6 @@ const HeroVideo = ({ title, videoUrl }) => (
   <div className={styles.heroVideo}>
     <div className={styles.videoWrapper}>
       <iframe
-        title={title || 'Hero Video'}
         className={styles.videoWrapperIframe}
         src={videoUrl}
         frameBorder="0"

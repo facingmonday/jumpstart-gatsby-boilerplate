@@ -1,0 +1,19 @@
+@import '../../themes/theme-1.scss';
+
+.iconBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: $iconBlockPadding;
+  margin: $iconBlockMargin;
+  border: 1px solid $iconBlockBorderColor;
+  height: 244px;
+  &__iconBlock {
+    margin: 20px 0px;
+  }
+
+  &__title {
+    margin: 20px 0px;
+  }
+}
