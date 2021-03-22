@@ -24,11 +24,11 @@ export default class Page extends Component {
   }
 
   render() {
-    const { children } = this.props;
+    const { children, headerColor } = this.props;
     return (
       <UIProvider>
         <div className={styles.main__container}>
-          <Header />
+          <Header headerColor={headerColor}/>
           <div className={styles.main__body}>
             { children }
           </div>

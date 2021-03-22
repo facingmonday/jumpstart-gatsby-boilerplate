@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import s from './HeroCarousel.module.scss';
+import classnames from 'classnames';
+import * as styles from './HeroCarousel.module.scss';
 
 class HeroCarousel extends Component {
   state = {}
@@ -17,10 +18,11 @@ class HeroCarousel extends Component {
 
   render() {
     const { images, imageStyles } = this.props;
+    console.log('images', images);
     return (
-      <div className={s.heroCarousel}>
+      <div className={styles.heroCarousel}>
         {
-          images.map((image, i) => <div key={i} style={{ 'backgroundImage': `url(${image})`}} className={s(s.heroCarousel__image, imageStyles)} />)
+          images.map((image, i) => <div key={i} style={{ 'backgroundImage': `url(${image.publicURL})`}} className={classnames(styles.heroCarousel__image, imageStyles)} />)
         }
       </div>
     );

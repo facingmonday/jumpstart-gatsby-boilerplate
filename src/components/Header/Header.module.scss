@@ -15,7 +15,7 @@
     align-items:center;
     width: 100%;
     color: #777;
-    height: 60px;
+    height: 80px;
   }
 
   &__navigation {
@@ -39,10 +39,10 @@
     font-size: 42px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    margin: 10px 0px 0px 10px;
+    margin: 10px 0px 0px 20px;
     padding: 0px;
     text-transform: capitalize;
-    max-width: 200px;
+    max-width: 300px;
     span {
       color: $color-1;
     }

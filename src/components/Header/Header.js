@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import { Link } from 'gatsby';
+import classnames from 'classnames';
 import { StaticImage } from 'gatsby-plugin-image';
-import { Menu, MenuItem, MenuButton } from '../menu';
-import Image from '../Image';
+import { Menu, MenuItem, MenuButton } from '../Menu';
 import NavigationLink from '../NavigationLink';
 import * as styles from './Header.module.scss';
 
@@ -18,18 +19,12 @@ class Header extends Component {
   }
 
   handleLinkClick(val) {
-    console.log('val', val);
     this.setState({ menuOpen: false });
     window.location.pathname = val.href;
   }
 
   render() {
     const menu = [
-      {
-        label: 'Services',
-        icon: '',
-        href: '/services',
-      },
       {
         label: 'Work',
         icon: '',
@@ -55,14 +50,18 @@ class Header extends Component {
         {val.label}
       </MenuItem>
     ));
+
     return (
       <div className={styles.header}>
-        <div className={styles.header__container}>
+        <div className={styles.header__container} {...(this.props.headerColor ? { style: { backgroundColor: this.props.headerColor } } : {})}>
           <div className={styles.header__logo}>
-            <StaticImage
-              src="../../assets/images/logos/logo.png"
-
-            />
+            <Link to="/">
+              <StaticImage
+                src="../../assets/images/logos/logo.png"
+                width="1204"
+                height="200"
+              />
+            </Link>
           </div>
           <MenuButton open={this.state.menuOpen} onClick={() => this.handleMenuClick()} color="white" />
           <div className={styles.header__navigation}>

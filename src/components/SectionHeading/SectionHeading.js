@@ -23,7 +23,7 @@ class SectionHeading extends Component {
   render() {
     const { title, subtitle, cta } = this.props;
     return (
-      <section className={styles.sectionHeading__container}>
+      <div className={styles.sectionHeading__container}>
         <div className={styles.sectionHeading__title_container}>                
           <h2 className={styles.sectionHeading__title}>{title}</h2>
           <h4 className={styles.sectionHeading__subtitle}>{subtitle}</h4>
@@ -35,7 +35,7 @@ class SectionHeading extends Component {
             </div>
             : null
           }
-      </section>
+      </div>
     );
   }
 }

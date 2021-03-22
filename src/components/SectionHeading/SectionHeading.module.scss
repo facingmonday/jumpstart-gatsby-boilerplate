@@ -3,7 +3,7 @@
 .sectionHeading {
   display: 'flex';
   &__container{
-    flex: 1;
+    align-self: stretch;
   }
   &__title_container {
     text-align: center;
@@ -12,6 +12,6 @@
     margin-bottom: 10px;
   }
   &__subtitle {
-    
+    font-weight: lighter;
   }
 }

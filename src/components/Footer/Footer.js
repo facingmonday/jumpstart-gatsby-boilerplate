@@ -32,27 +32,30 @@ class Footer extends Component {
     return (
       <div className={styles.footer}>
         <div className={styles.footer__column}>
-          <a className={styles.footer__link} href={'consulting'}>
-            Consulting
+          <h4 className={styles.footer__h4}>Who I Am</h4>
+          <h1 className={styles.footer__h1}>Creative Jay LLC</h1>
+          <p className={styles.footer__p}>I'm a full stack developer, videographer, photographer, graphic designer, printer, musician and friend.</p>
+        </div>
+        <div className={styles.footer__column}>
+          <a className={styles.footer__link} href={'/work/apps'}>
+            Apps
           </a>
-          <a className={styles.footer__link} href={'photo'}>
+          <a className={styles.footer__link} href={'/work/photo'}>
+            Print
+          </a>
+          <a className={styles.footer__link} href={'/work/photo'}>
             Photography
           </a>
-          <a className={styles.footer__link} href={'video'}>
+          <a className={styles.footer__link} href={'/work/video'}>
             Video
           </a>
-          <a className={styles.footer__link} href={'web'}>
+          <a className={styles.footer__link} href={'/work/web'}>
             Web
-          </a>
-          <a className={styles.footer__link} href={'apps'}>
-            Apps
           </a>
         </div>
         <div className={styles.footer__column}>
-          <a className={styles.footer__link} href={'shop'}>
-            Shop
-          </a>
-          <a className={styles.footer__link} href={'about'}>
+
+         <a className={styles.footer__link} href={'about'}>
             About Us
           </a>
           <a className={styles.footer__link} href={'faq'}>
@@ -61,20 +64,10 @@ class Footer extends Component {
           <a className={styles.footer__link} href={'contact'}>
             Contact
           </a>
-        </div>
-        <div className={styles.footer__column}>
           <div className={styles.footer__address}>
               <p>1234 Dietz Ave.</p>
               <p>Akron, OH 44203</p>
             </div>
-        </div>
-        <div className={styles.footer__column}>
-          {/* <GoogleMap
-            width={'250'}
-            height={'250'}
-            source={'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJu_Ow6YHTMIgRAbFqlGJn2mQ&key=AIzaSyA9TALVNowW_loCDV5GsjwcmkS3fLb4kSc'}
-            allowFullScreen={false}
-          /> */}
         </div>
       </div>
     )

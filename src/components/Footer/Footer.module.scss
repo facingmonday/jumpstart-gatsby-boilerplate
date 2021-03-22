@@ -5,15 +5,16 @@
   flex-direction: 'row';
   justify-content: space-between;
   background-color: black;
-  padding: 20px;
+  padding: 0px 120px;
+  align-self: center;
   &__column {
+    flex: 1;
     padding: 20px;
     display: flex;
     flex-direction: column;
-
   }
   &__link {
-    font-size: 1.5em;
+    font-size: 1em;
     text-decoration: none;
     color: $offwhite;
     text-transform: uppercase;
@@ -23,9 +24,18 @@
     }
   }
   &__address {
-    font-size: 1.2em;
+    font-size: 1em;
     text-decoration: none;
     color: $offwhite;
     text-transform: uppercase;
+  }
+  &__h4 {
+    color: $color-text-light;
+  }
+  &__p {
+    color: $color-text-light;
+  }
+  &__h1 {
+    color: $color-text-light;
   }
 }
