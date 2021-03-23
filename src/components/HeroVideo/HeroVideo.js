@@ -1,22 +1,19 @@
 import React, { Component } from 'react';
 
+import YoutubeBackground from 'react-youtube-background';
 import * as styles from './HeroVideo.module.scss';
 
-const HeroVideo = ({ title, videoUrl }) => (
+const HeroVideo = ({ title, videoId }) => (
   <div className={styles.heroVideo}>
     <div className={styles.videoWrapper}>
-      <iframe
-        title={title || 'Hero Video'}
-        className={styles.videoWrapperIframe}
-        src={videoUrl}
-        frameBorder="0"
-        webkitallowfullscreen
-        mozallowfullscreen
-        allowFullScreen
-      />
+      <YoutubeBackground
+        videoId="X7VMtUum7wY"
+        className={styles.videoWrapper}
+      >
+        <h1>Test</h1>
+      </YoutubeBackground>
     </div>
   </div>
-
 );
 
 export default HeroVideo;

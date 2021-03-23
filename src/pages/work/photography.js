@@ -3,6 +3,8 @@ import Grid from '@material-ui/core/Grid';
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 
+import Gallery from '@browniebroke/gatsby-image-gallery';
+
 import { useStaticQuery, graphql } from 'gatsby'; // to query for image data
 import Img from 'gatsby-image'; // to take image data and render it
 import HeroCarousel from '../../components/HeroCarousel';
@@ -17,51 +19,130 @@ import SectionHeading from '../../components/SectionHeading';
 
 import * as styles from './work.module.scss';
 
-const PhotographyPage = () => {
-  const { allFile } = useStaticQuery(graphql`
-    query {
-      allFile(filter: {relativeDirectory: {eq: "work"}}) {
-        edges {
-          node {
-            id
-            name
-            absolutePath
-            publicURL
+export const pageQuery = graphql`
+  query {
+    images: allFile(filter: {dir: {regex: "/assets\/images\/photography\/gallery/"}}) {
+      edges {
+        node {
+          childImageSharp {
+            thumb: gatsbyImageData(
+              width: 270
+              height: 270
+              placeholder: BLURRED
+            )
+            full: gatsbyImageData(layout: FULL_WIDTH)
           }
         }
       }
     }
-  `);
+    eventImages: allFile(filter: {dir: {regex: "/assets\/images\/photography\/event-gallery/"}}) {
+      edges {
+        node {
+          childImageSharp {
+            thumb: gatsbyImageData(
+              width: 270
+              height: 270
+              placeholder: BLURRED
+            )
+            full: gatsbyImageData(layout: FULL_WIDTH)
+          }
+        }
+      }
+    }
+    concertImages: allFile(filter: {dir: {regex: "/assets\/images\/photography\/concerts-gallery/"}}) {
+      edges {
+        node {
+          childImageSharp {
+            thumb: gatsbyImageData(
+              width: 270
+              height: 270
+              placeholder: BLURRED
+            )
+            full: gatsbyImageData(layout: FULL_WIDTH)
+          }
+        }
+      }
+    }
+    heroImage: allFile(filter: {relativeDirectory: {eq: "work"}}) {
+      edges {
+        node {
+          id
+          name
+          absolutePath
+          publicURL
+        }
+      }
+    }
+  }
+`;
+
+const PhotographyPage = ({
+  data: {
+    concertImages, eventImages, heroImage, images,
+  },
+}) => {
+  // `images` is an array of objects with `thumb` and `full`
+  const galleryImages = images.edges
+    .map(({ node }) => node.childImageSharp)
+    .filter((image) => image?.thumb);
+
+  const eventGalleryImages = eventImages.edges
+    .map(({ node }) => node.childImageSharp)
+    .filter((image) => image?.thumb);
+
+  const concertGalleryImages = concertImages.edges
+    .map(({ node }) => node.childImageSharp)
+    .filter((image) => image?.thumb);
+
   return (
     <Page headerColor="black">
       <SEO title="Work" />
       <HeroCarousel
         title="Professional Video Editing"
-        images={allFile?.edges?.map(({ node }) => node)}
+        images={heroImage?.edges?.map(({ node }) => node)}
       />
       <Section>
-        <Grid container spacing={8} style={{ padding: '40px' }}>
-          <Grid item xs={12} sm={4}>
-            <h1 className={styles.sectionTitle}>Video</h1>
-            <p className={styles.sectionDescription}>
-              Inspired by the hard list by Andy Fricella. Keep track of your critical tasks that need to be done each day.
-            </p>
+        <Grid container spacing={4}>
+          <Grid item xs={6}>
+            <StaticImage
+              src="../../assets/images/photography/event-photography.jpg"
+            />
           </Grid>
-          <Grid item xs={12} sm={8} style={{ display: 'flex', justifyContent: 'center' }}>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/X7VMtUum7wY" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+          <Grid item xs={6}>
+            <h2>Corporate Events &amp; Outings</h2>
+          </Grid>
+          <Grid item xs={12}>
+            { eventGalleryImages?.length && <Gallery images={eventGalleryImages} /> }
           </Grid>
         </Grid>
       </Section>
       <Section>
-        <Grid container spacing={8} style={{ padding: '40px' }}>
-          <Grid item xs={12} sm={8} style={{ display: 'flex', justifyContent: 'center' }}>
-            <iframe title="vimeo-player" src="https://player.vimeo.com/video/366383639" width="640" height="360" frameBorder="0" allowFullScreen />
+        <Grid container spacing={4}>
+          <Grid item xs={6}>
+            <h2>Senior Pictures</h2>
           </Grid>
-          <Grid item xs={12} sm={4}>
-            <h1 className={styles.sectionTitle}>Video</h1>
-            <p className={styles.sectionDescription}>
-              Inspired by the hard list by Andy Fricella. Keep track of your critical tasks that need to be done each day.
-            </p>
+          <Grid item xs={6}>
+            <StaticImage
+              src="../../assets/images/photography/senior-pictures.jpg"
+            />
+          </Grid>
+          <Grid item xs={12}>
+            { galleryImages?.length && <Gallery images={galleryImages} onClose={(e) => { e.preventDefault(); return false; }} /> }
+          </Grid>
+        </Grid>
+      </Section>
+      <Section>
+        <Grid container spacing={4}>
+          <Grid item xs={8}>
+            <StaticImage
+              src="../../assets/images/photography/concert-photography.jpg"
+            />
+          </Grid>
+          <Grid item xs={4}>
+            <h2>Concerts &amp; Music Festivals</h2>
+          </Grid>
+          <Grid item xs={12}>
+            { concertGalleryImages?.length && <Gallery images={concertGalleryImages} /> }
           </Grid>
         </Grid>
       </Section>

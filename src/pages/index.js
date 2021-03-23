@@ -2,7 +2,6 @@ import * as React from 'react';
 import Grid from '@material-ui/core/Grid';
 import { Link, graphql } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
-
 import HeroVideo from '../components/HeroVideo';
 
 import Page from '../components/Page';
@@ -20,7 +19,7 @@ const IndexPage = ({ data }) => (
     <SEO title="Home" />
     <HeroVideo
       title="Professional Video Editing"
-      videoUrl="https://player.vimeo.com/video/393604471?background=1&autoplay=1&loop=1&byline=0&title=0"
+      videoId="393604471"
     />
     <Section>
       <BlockSet
@@ -29,16 +28,16 @@ const IndexPage = ({ data }) => (
         md={4}
       >
         <IconBlock
-          title="Consulting"
-          description="We like to consult"
-          iconName="users"
-          href="/services/consulting"
+          title="Apps"
+          description="Mobile apps for iPhone and Android"
+          iconName="smartphone"
+          href="/services/apps"
         />
         <IconBlock
-          title="Photography"
-          description="We provide all kinds of services"
-          iconName="aperture"
-          href="/services/photography"
+          title="Websites"
+          description="Marketing Websites and API's"
+          iconName="globe"
+          href="/services/web"
         />
         <IconBlock
           title="Video"
@@ -47,10 +46,10 @@ const IndexPage = ({ data }) => (
           href="/services/video"
         />
         <IconBlock
-          title="Website and Apps"
-          description="Marketing, Shopify, eCommerce, and custom built apps"
-          iconName="globe"
-          href="/services/web"
+          title="Photography"
+          description="We provide all kinds of services"
+          iconName="aperture"
+          href="/services/photography"
         />
         <IconBlock
           title="Print"
@@ -61,7 +60,7 @@ const IndexPage = ({ data }) => (
         <IconBlock
           title="Social"
           description="We provide all kinds of services"
-          iconName="share"
+          iconName="share2"
           href="/services/social"
         />
       </BlockSet>
@@ -88,10 +87,10 @@ const IndexPage = ({ data }) => (
           </p>
           <div style={{ display: 'flex' }}>
             <Link to="https://store.apple.com">
-              <StaticImage style={{ marginRight: 20 }} src="../assets/images/logos/iosappstore.png" />
+              <StaticImage style={{ height: 60, marginRight: 20 }} src="../assets/images/apps/iosappstore.png" />
             </Link>
             <Link to="https://store.apple.com">
-              <StaticImage src="../assets/images/apps/playstore.png" />
+              <StaticImage style={{ height: 60, marginRight: 20 }} src="../assets/images/apps/playstore.png" />
             </Link>
           </div>
         </Grid>
