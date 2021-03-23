@@ -33,7 +33,7 @@ class Header extends Component {
       {
         label: 'Blog',
         icon: '',
-        href: '/blog',
+        href: '/blogs',
       },
       {
         label: 'Contact',

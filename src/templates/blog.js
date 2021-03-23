@@ -18,8 +18,6 @@ export default function BlogTemplate({
       <Section>
         <div className="blog-post-container">
           <div className="blog-post">
-            <h1>{frontmatter.title}</h1>
-            <h2>{frontmatter.date}</h2>
             <div
               className="blog-post-content"
               dangerouslySetInnerHTML={{ __html: html }}
@@ -27,9 +25,7 @@ export default function BlogTemplate({
           </div>
         </div>
       </Section>
-
     </Page>
-
   );
 }
 

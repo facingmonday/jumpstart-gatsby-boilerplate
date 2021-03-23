@@ -135,7 +135,7 @@ const PhotographyPage = ({
         <Grid container spacing={4}>
           <Grid item xs={8}>
             <StaticImage
-              src="../../assets/images/photography/concert-photography.jpg"
+              src="../../assets/images/photography/concerts.jpg"
             />
           </Grid>
           <Grid item xs={4}>

@@ -9,9 +9,7 @@ const HeroVideo = ({ title, videoId }) => (
       <YoutubeBackground
         videoId="X7VMtUum7wY"
         className={styles.videoWrapper}
-      >
-        <h1>Test</h1>
-      </YoutubeBackground>
+      />
     </div>
   </div>
 );

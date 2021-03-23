@@ -1,8 +1,9 @@
 ---
 slug: "/blog/gatsby-cheat-sheet"
 date: "2017-11-07"
-title: "My first blog post"
-featuredImage: "../../assets/images/blog/blog-1.jpg"
+title: "Gatsby Cheat Sheet"
+description: "Gatsby can have some quircky ways of dealing with your data and it's dangerous to go alone. Take this."
+featuredImage: "../../assets/images/blog/gatsby.jpg"
 ---
 
 # Gatsby Cheatsheet

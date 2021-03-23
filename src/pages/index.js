@@ -22,6 +22,22 @@ const IndexPage = ({ data }) => (
       videoId="393604471"
     />
     <Section>
+      <Grid container spacing={8} style={{ padding: '40px' }}>
+        <Grid item xs={12} sm={4}>
+          <p className={styles.sectionUpperTitle}>Check out my latest work.</p>
+          <h1 className={styles.sectionTitle}>Welcome to my portfolio</h1>
+          <p className={styles.sectionDescription}>
+            I'm a full stack developer, videographer, photographer, graphic designer, printer, musician and friend.
+          </p>
+        </Grid>
+        <Grid item xs={12} sm={8} style={{ display: 'flex', justifyContent: 'center' }}>
+          <StaticImage
+            src="../assets/images/home/deviceshomepage.jpg"
+          />
+        </Grid>
+      </Grid>
+    </Section>
+    <Section>
       <BlockSet
         xs={12}
         sm={6}
@@ -31,37 +47,37 @@ const IndexPage = ({ data }) => (
           title="Apps"
           description="Mobile apps for iPhone and Android"
           iconName="smartphone"
-          href="/services/apps"
+          href="/work/apps"
         />
         <IconBlock
           title="Websites"
           description="Marketing Websites and API's"
           iconName="globe"
-          href="/services/web"
+          href="/work/web"
         />
         <IconBlock
           title="Video"
           description="We provide all kinds of services"
           iconName="video"
-          href="/services/video"
+          href="/work/video"
         />
         <IconBlock
           title="Photography"
           description="We provide all kinds of services"
           iconName="aperture"
-          href="/services/photography"
+          href="/work/photography"
         />
         <IconBlock
           title="Print"
           description="T-shirts, posters, banners, oh my!"
           iconName="printer"
-          href="/services/print"
+          href="/work/print"
         />
         <IconBlock
           title="Social"
           description="We provide all kinds of services"
           iconName="share2"
-          href="/services/social"
+          href="/work/social"
         />
       </BlockSet>
     </Section>
@@ -87,10 +103,10 @@ const IndexPage = ({ data }) => (
           </p>
           <div style={{ display: 'flex' }}>
             <Link to="https://store.apple.com">
-              <StaticImage style={{ height: 60, marginRight: 20 }} src="../assets/images/apps/iosappstore.png" />
+              <StaticImage src="../assets/images/apps/iosappstore.png" />
             </Link>
             <Link to="https://store.apple.com">
-              <StaticImage style={{ height: 60, marginRight: 20 }} src="../assets/images/apps/playstore.png" />
+              <StaticImage src="../assets/images/apps/playstore.png" />
             </Link>
           </div>
         </Grid>
@@ -138,10 +154,10 @@ const IndexPage = ({ data }) => (
           <h1 className={styles.sectionTitle}>Guerrilla Sportswear</h1>
           <h4>Clothing for fighters</h4>
           <p className={styles.sectionDescription}>
-            A landing site for country artist Mark Leach for his upcoming single.
+            Built with shopify.
           </p>
           <div>
-            <Link to="http://markleachmusic.com" style={{ textDecoration: 'none' }}><h4>Visit Site</h4></Link>
+            <Link to="http://guerrillasportswear.com" style={{ textDecoration: 'none' }}><h4>Visit Site</h4></Link>
           </div>
         </Grid>
         <Grid item xs={12} sm={6}>

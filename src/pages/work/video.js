@@ -105,13 +105,13 @@ const VideoPage = () => {
 
           </Grid>
           <Grid item xs={12} sm={12} sm={6} md={4}>
-            <iframe src="https://player.vimeo.com/video/366383639" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen />
+            <iframe title="vimeo-player" src="https://player.vimeo.com/video/351035091" frameBorder="0" allowFullScreen />
           </Grid>
           <Grid item xs={12} sm={12} sm={6} md={4}>
-            <iframe src="https://player.vimeo.com/video/367436881" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen />
+            <iframe src="https://player.vimeo.com/video/290144468" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen />
           </Grid>
           <Grid item xs={12} sm={12} sm={6} md={4}>
-            <iframe src="https://player.vimeo.com/video/365427097" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen />
+            <iframe src="https://player.vimeo.com/video/294892756" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen />
           </Grid>
         </Grid>
       </Section>

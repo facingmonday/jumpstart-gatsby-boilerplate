@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Grid from '@material-ui/core/Grid';
-import { Link } from 'gatsby';
+import Button from '@material-ui/core/Button';
+import { Link, navigate } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 
 import { useStaticQuery, graphql } from 'gatsby'; // to query for image data
@@ -8,7 +9,6 @@ import Img from 'gatsby-image'; // to take image data and render it
 import HeroCarousel from '../../components/HeroCarousel';
 import Page from '../../components/Page';
 import SEO from '../../components/SEO';
-import Button from '../../components/Button';
 import Section from '../../components/Section';
 import BlockSet from '../../components/BlockSet';
 import IconBlock from '../../components/IconBlock';
@@ -38,132 +38,91 @@ const WorkPage = () => {
         title="Professional Video Editing"
         images={allFile?.edges?.map(({ node }) => node)}
       />
-
       <Section>
         <Grid container spacing={8} style={{ padding: '40px' }}>
+          <Grid item xs={12} sm={8} style={{ display: 'flex', justifyContent: 'center' }}>
+            <StaticImage
+              src="../../assets/images/apps/hero/app.jpg"
+            />
+          </Grid>
           <Grid item xs={12} sm={4}>
+            <p className={styles.sectionUpperTitle}>On the app store</p>
+            <h1 className={styles.sectionTitle}>Mobile Apps</h1>
+            <p className={styles.sectionDescription}>
+              Since the first app store came into existance, I've been involved. A lot has changed since the iPhone 3, but I'm sticking with it.
+            </p>
+            <Button variant="contained" onClick={() => navigate('/work/apps')}><p style={{ margin: '5px 10px' }}>View More</p></Button>
+          </Grid>
+        </Grid>
+      </Section>
+      <Section>
+        <Grid container spacing={8} style={{ padding: '40px' }}>
+          <Grid item xs={12} sm={5}>
             <p className={styles.sectionUpperTitle}>Everything in motion</p>
             <h1 className={styles.sectionTitle}>Video</h1>
             <p className={styles.sectionDescription}>
-              Inspired by the hard list by Andy Fricella. Keep track of your critical tasks
-              that need to be done each day. When you complete them, cross them off the list. Once you've accomplished all your tasks for that day, we'll mark it as a W. Otherwise, we'll chalk it up as an L and we all know what that means.
+              Activist group known as The Woovs risk everything to overthrow a tyrannical social media empire and save society from the Information Blues.
             </p>
+            <p className={styles.sectionDescription}>
+              No but seriously it's just a music video I filmed with some friends.
+            </p>
+            <Button variant="contained" onClick={() => navigate('/work/video')}><p style={{ margin: '5px 10px' }}>View More</p></Button>
           </Grid>
-          <Grid item xs={12} sm={8} style={{ display: 'flex', justifyContent: 'center' }}>
+          <Grid item xs={12} sm={7} style={{ display: 'flex', justifyContent: 'center' }}>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/X7VMtUum7wY" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
           </Grid>
         </Grid>
       </Section>
-      <Section containerStyle={{ backgroundColor: 'black', height: '90px', padding: '20 10' }}>
-        <div style={{ display: 'flex', width: '100%' }}>
-          <div style={{ flex: 5 }}>
-            <h1 className={styles.bannerText}>
-              Need help with anything? Reach out and say hi!
-            </h1>
-          </div>
-          <div style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-            <Button>Contact Us</Button>
-          </div>
-        </div>
+
+      <Section>
+        <Grid container spacing={8} style={{ padding: '40px' }}>
+          <Grid item xs={12} sm={8} style={{ display: 'flex', justifyContent: 'center' }}>
+            <StaticImage
+              src="../../assets/images/apps/hero/app.jpg"
+            />
+          </Grid>
+          <Grid item xs={12} sm={4}>
+            <p className={styles.sectionUpperTitle}>Power the internet</p>
+            <h1 className={styles.sectionTitle}>Websites and APIs</h1>
+            <p className={styles.sectionDescription}>
+              I like building websites. I'm not be best designer in the world but I can piece it together for you. My specialty is API's though. Giving those apps data to work with is something I've been doing for a while now.
+            </p>
+            <Button variant="contained" onClick={() => navigate('/work/web')}><p style={{ margin: '5px 10px' }}>View More</p></Button>
+          </Grid>
+        </Grid>
       </Section>
       <Section>
         <Grid container spacing={8} style={{ padding: '40px' }}>
           <Grid item xs={12} sm={4}>
-            <StaticImage
-              src="../assets/images/home/markleach.png"
-            />
-          </Grid>
-          <Grid item xs={12} sm={8}>
-            <h1 className={styles.sectionTitle}>Mark Leach</h1>
-            <h4>Here&apos;s looking at you, kid.</h4>
+            <p className={styles.sectionUpperTitle}>A picture is worth a thousand words</p>
+            <h1 className={styles.sectionTitle}>Photography</h1>
             <p className={styles.sectionDescription}>
-              A landing site for country artist Mark Leach for his upcoming single.
+              Inspired by the hard list by Andy Fricella. Keep track of your critical tasks
+              that need to be done each day. When you complete them, cross them off the list. Once you've accomplished all your tasks for that day, we'll mark it as a W. Otherwise, we'll chalk it up as an L and we all know what that means.
             </p>
-            <div>
-              <Link to="http://markleachmusic.com" style={{ textDecoration: 'none' }}><h4>Visit Site</h4></Link>
-            </div>
+            <Button variant="contained" onClick={() => navigate('/work/photography')}><p style={{ margin: '5px 10px' }}>View More</p></Button>
+          </Grid>
+          <Grid item xs={12} sm={8} style={{ display: 'flex', justifyContent: 'center' }}>
+            <StaticImage
+              src="../../assets/images/photography/event-photography.jpg"
+            />
           </Grid>
         </Grid>
       </Section>
       <Section>
         <Grid container spacing={8} style={{ padding: '40px' }}>
-          <Grid item xs={12} sm={6}>
-            <h1 className={styles.sectionTitle}>Guerrilla Sportswear</h1>
-            <h4>Clothing for fighters</h4>
+          <Grid item xs={12} sm={8} style={{ display: 'flex', justifyContent: 'center' }}>
+            <StaticImage
+              src="../../assets/images/print/tshirtpress.jpg"
+            />
+          </Grid>
+          <Grid item xs={12} sm={4}>
+            <p className={styles.sectionUpperTitle}>A picture is worth a thousand words</p>
+            <h1 className={styles.sectionTitle}>Print</h1>
             <p className={styles.sectionDescription}>
-              A landing site for country artist Mark Leach for his upcoming single.
+              Printing t-shirts, designing flyers, branding content.
             </p>
-            <div>
-              <Link to="http://markleachmusic.com" style={{ textDecoration: 'none' }}><h4>Visit Site</h4></Link>
-            </div>
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <StaticImage
-              src="../assets/images/home/gswlaptop.png"
-            />
-          </Grid>
-        </Grid>
-      </Section>
-      <Section containerStyle={{ backgroundColor: 'black', height: '90px', padding: '20 10' }}>
-        <div style={{ display: 'flex', width: '100%' }}>
-          <div style={{ flex: 5 }}>
-            <h1 className={styles.bannerText}>
-              Need help with anything? Reach out and say hi!
-            </h1>
-          </div>
-          <div style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-            <Button>Contact Us</Button>
-          </div>
-        </div>
-      </Section>
-      <Section containerStyle={{
-        display: 'block', justifyContent: 'center', alignItems: 'center', backgroundColor: '#ddd',
-      }}
-      >
-        <SectionHeading
-          title="Clients"
-          subtitle="I get by with a little help from my friends"
-        />
-        <Grid container>
-          <Grid item xs={12} sm={6} md={4} lg={3}>
-            <StaticImage
-              src="../assets/images/logos/logo-1.png"
-            />
-          </Grid>
-          <Grid item xs={12} sm={6} md={4} lg={3}>
-            <StaticImage
-              src="../assets/images/logos/logo-2.png"
-            />
-          </Grid>
-          <Grid item xs={12} sm={6} md={4} lg={3}>
-            <StaticImage
-              src="../assets/images/logos/logo-3.png"
-            />
-          </Grid>
-          <Grid item xs={12} sm={6} md={4} lg={3}>
-            <StaticImage
-              src="../assets/images/logos/logo-4.png"
-            />
-          </Grid>
-          <Grid item xs={12} sm={6} md={4} lg={3}>
-            <StaticImage
-              src="../assets/images/logos/logo-5.png"
-            />
-          </Grid>
-          <Grid item xs={12} sm={6} md={4} lg={3}>
-            <StaticImage
-              src="../assets/images/logos/logo-6.png"
-            />
-          </Grid>
-          <Grid item xs={12} sm={6} md={4} lg={3}>
-            <StaticImage
-              src="../assets/images/logos/logo-7.png"
-            />
-          </Grid>
-          <Grid item xs={12} sm={6} md={4} lg={3}>
-            <StaticImage
-              src="../assets/images/logos/logo-8.png"
-            />
+            <Button variant="contained" onClick={() => navigate('/work/print')}><p style={{ margin: '5px 10px' }}>View More</p></Button>
           </Grid>
         </Grid>
       </Section>
