@@ -1,9 +1,8 @@
 import * as React from 'react';
 import Grid from '@material-ui/core/Grid';
-import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 
-import { useStaticQuery, graphql } from 'gatsby'; // to query for image data
+import { useStaticQuery, graphql, navigate } from 'gatsby'; // to query for image data
 import Img from 'gatsby-image'; // to take image data and render it
 import HeroCarousel from '../../components/HeroCarousel';
 
@@ -20,7 +19,7 @@ import * as styles from './work.module.scss';
 const PrintPage = () => {
   const { allFile } = useStaticQuery(graphql`
     query {
-      allFile(filter: {relativeDirectory: {eq: "work"}}) {
+      allFile(filter: {absolutePath: {regex: "/graphicdesign\/hero/"}}) {
         edges {
           node {
             id
@@ -55,14 +54,36 @@ const PrintPage = () => {
       <Section>
         <Grid container spacing={8} style={{ padding: '40px' }}>
           <Grid item xs={12} sm={8} style={{ display: 'flex', justifyContent: 'center' }}>
-            <iframe title="vimeo-player" src="https://player.vimeo.com/video/366383639" width="640" height="360" frameBorder="0" allowFullScreen />
+            <StaticImage
+              src="../../assets/images/print/tshirtpress.jpg"
+            />
           </Grid>
           <Grid item xs={12} sm={4}>
-            <h1 className={styles.sectionTitle}>Video</h1>
+            <p className={styles.sectionUpperTitle}>A picture is worth a thousand words</p>
+            <h1 className={styles.sectionTitle}>Print</h1>
             <p className={styles.sectionDescription}>
-              Inspired by the hard list by Andy Fricella. Keep track of your critical tasks that need to be done each day.
+              Printing t-shirts, designing flyers, branding content.
             </p>
+            <Button variant="contained" onClick={() => navigate('/work/print')}><p style={{ margin: '5px 10px' }}>View More</p></Button>
           </Grid>
+        </Grid>
+      </Section>
+      <Section>
+        <Grid container spacing={8} style={{ padding: '40px' }}>
+          <Grid item xs={12} sm={4}>
+            <p className={styles.sectionUpperTitle}>A picture is worth a thousand words</p>
+            <h1 className={styles.sectionTitle}>Print</h1>
+            <p className={styles.sectionDescription}>
+              Printing t-shirts, designing flyers, branding content.
+            </p>
+            <Button variant="contained" onClick={() => navigate('/work/print')}><p style={{ margin: '5px 10px' }}>View More</p></Button>
+          </Grid>
+          <Grid item xs={12} sm={8} style={{ display: 'flex', justifyContent: 'center' }}>
+            <StaticImage
+              src="../../assets/images/print/tshirtpress.jpg"
+            />
+          </Grid>
+
         </Grid>
       </Section>
     </Page>

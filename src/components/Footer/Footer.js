@@ -40,10 +40,10 @@ class Footer extends Component {
           <a className={styles.footer__link} href={'/work/apps'}>
             Apps
           </a>
-          <a className={styles.footer__link} href={'/work/photo'}>
-            Print
+          <a className={styles.footer__link} href={'/work/graphicdesign'}>
+            Graphic Design
           </a>
-          <a className={styles.footer__link} href={'/work/photo'}>
+          <a className={styles.footer__link} href={'/work/photography'}>
             Photography
           </a>
           <a className={styles.footer__link} href={'/work/video'}>

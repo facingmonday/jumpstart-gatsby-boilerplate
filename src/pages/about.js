@@ -32,37 +32,37 @@ const IndexPage = ({ data }) => (
           title="Consulting"
           description="We like to consult"
           iconName="users"
-          href="/services/consulting"
+          href="/work/consulting"
         />
         <IconBlock
           title="Photography"
-          description="We provide all kinds of services"
+          description="We provide all kinds of work"
           iconName="aperture"
-          href="/services/photography"
+          href="/work/photography"
         />
         <IconBlock
           title="Video"
-          description="We provide all kinds of services"
+          description="We provide all kinds of work"
           iconName="video"
-          href="/services/video"
+          href="/work/video"
         />
         <IconBlock
           title="Website and Apps"
           description="Marketing, Shopify, eCommerce, and custom built apps"
           iconName="globe"
-          href="/services/web"
+          href="/work/web"
         />
         <IconBlock
-          title="Print"
-          description="T-shirts, posters, banners, oh my!"
+          title="Graphic Design"
+          description="Social media, T-shirts, Posters, Banners, oh my!"
           iconName="printer"
-          href="/services/print"
+          href="/work/print"
         />
         <IconBlock
           title="Social"
-          description="We provide all kinds of services"
+          description="We provide all kinds of work"
           iconName="share"
-          href="/services/social"
+          href="/work/social"
         />
       </BlockSet>
     </Section>

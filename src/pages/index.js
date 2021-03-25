@@ -68,10 +68,10 @@ const IndexPage = ({ data }) => (
           href="/work/photography"
         />
         <IconBlock
-          title="Print"
-          description="T-shirts, posters, banners, oh my!"
+          title="Graphic Design"
+          description="Social media, T-shirts, Posters, Banners"
           iconName="printer"
-          href="/work/print"
+          href="/work/graphicdesign"
         />
         <IconBlock
           title="Social"

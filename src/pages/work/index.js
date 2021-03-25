@@ -118,11 +118,11 @@ const WorkPage = () => {
           </Grid>
           <Grid item xs={12} sm={4}>
             <p className={styles.sectionUpperTitle}>A picture is worth a thousand words</p>
-            <h1 className={styles.sectionTitle}>Print</h1>
+            <h1 className={styles.sectionTitle}>Graphic Design</h1>
             <p className={styles.sectionDescription}>
-              Printing t-shirts, designing flyers, branding content.
+              Social media ads, printing t-shirts, designing flyers, branding content.
             </p>
-            <Button variant="contained" onClick={() => navigate('/work/print')}><p style={{ margin: '5px 10px' }}>View More</p></Button>
+            <Button variant="contained" onClick={() => navigate('/work/graphicdesign')}><p style={{ margin: '5px 10px' }}>View More</p></Button>
           </Grid>
         </Grid>
       </Section>
